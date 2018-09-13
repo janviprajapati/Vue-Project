@@ -1,0 +1,108 @@
+<template>
+  <div>
+   <header>
+  <div class="container">
+    <h1><a href="/">logo</a></h1>
+    <nav>
+     <button @click="aboutUs">About Us</button>
+      <button @click="contactUs">Contact Us</button>
+      <button @click="Pricing">Pricing</button>
+    </nav>
+  </div>
+</header>    
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Header',
+  data () {
+    return {
+      msg: 'this is header'
+    }
+  },
+  methods:{
+    contactUs(){
+      this.$router.push({name: 'contact'})
+    },
+     aboutUs(){
+      this.$router.push({name: 'about'})
+    },
+     Pricing(){
+      this.$router.push({name: 'pricing'})
+    }
+  }
+}
+</script>
+
+<style>
+
+header {
+  font-family: sans-serif;
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  top: 0;
+  left: 0;
+  background-color: rgba(22, 22, 22, 0.4);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.4);
+  -webkit-transition: height 0.3s;
+}
+header .container {
+  width: 90%;
+  margin: 0 auto;
+}
+header h1 {
+  margin-top: 0;
+}
+header h1, header nav {
+  float: left;
+  display: inline-block;
+  position: relative;
+  line-height: 150px;
+  -webkit-transition: all 0.3s;
+}
+header a {
+  text-decoration: none;
+  color: #ccc;
+}
+header nav {
+  float: right;
+  line-height: 150px;
+  font-size: 1.4em;
+}
+header nav a {
+  margin-left: 10px;
+}
+header nav a:hover {
+  border-top: 2px dotted white;
+  border-bottom: 2px dotted white;
+}
+
+header.minimized {
+  height: 60px;
+}
+header.minimized h1, header.minimized nav {
+  line-height: 60px;
+}
+header.minimized nav {
+  font-size: 1.2em;
+}
+header.minimized h1 {
+  font-size: 1.7em;
+}
+
+.container {
+  height: 2000px;
+}
+button {
+     background:none!important;
+     color:inherit;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     
+     cursor: pointer;
+}
+</style>
