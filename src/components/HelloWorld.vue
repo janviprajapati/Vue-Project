@@ -1,7 +1,11 @@
 <template>
   <div>
+    <div>
     <Header></Header><br/><br/>
+    </div>
+    <div class="contain">
     <h1>{{ msg }}</h1>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -24,6 +28,9 @@ export default {
 </script>
 
 <style scoped>
+.contain{
+  margin-top: 200px;
+}
 h1, h2 {
   font-weight: normal;
 }
