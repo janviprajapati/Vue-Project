@@ -69,7 +69,7 @@ header a {
 header nav {
   float: right;
   line-height: 150px;
-  
+  font-size: 1.4em;
 }
 header nav a {
   margin-left: 10px;
