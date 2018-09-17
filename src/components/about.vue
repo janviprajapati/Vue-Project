@@ -33,7 +33,6 @@ export default {
     return {
       msg: 'Welcome to about us'
     }
-
   }
 }
 </script>

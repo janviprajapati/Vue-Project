@@ -1,14 +1,30 @@
 <template>
    <footer> 
         <div class="copyright">
-        <p>&copy 2018 - Organization</p>
+        <p>&copy 2018 - Organization |
+         <button @click="aboutUs">About Us |</button>
+         <button @click="contactUs">Contact Us</button>
+        </p>
         </div>
   </footer> 
 </template>
 
 <script>
 export default {
-    
+  name: 'Footer',
+  data () {
+    return {
+      
+    }
+  },
+  methods:{
+    contactUs(){
+      this.$router.push({name: 'contact'})
+    },
+     aboutUs(){
+      this.$router.push({name: 'about'})
+    }
+  }  
 }
 </script>
 
@@ -29,8 +45,9 @@ footer {
     height: 60px;
     width: 100%;
 
+     margin-left: 10px;
     
-};
+}
 footer .copyright {
   width: 50%;
   float: left;
@@ -43,5 +60,9 @@ footer .copyright p {
   text-transform: capitalize;
   letter-spacing: 1px;
 }
-
+.button{
+  float: right;
+  line-height: 150px;
+  font-size: 1.4em;
+}
 </style>
